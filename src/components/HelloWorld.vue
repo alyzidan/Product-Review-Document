@@ -1,9 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <b-button variant="primary">
-      click me
-    </b-button>
+    <b-button variant="primary"> click me </b-button>
 
     <h3>Installed CLI Plugins</h3>
     <ul>

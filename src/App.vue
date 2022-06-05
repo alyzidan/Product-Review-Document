@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-      <main>
-            <side-bar></side-bar>
-              <transition name="fade">
-                    <router-view />
-              </transition>
-      </main>
+    <main>
+      <side-bar></side-bar>
+      <transition name="fade">
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
@@ -32,17 +32,15 @@
 }
 </style>
 <script lang="ts">
-  import { Component, Prop, Vue } from 'vue-property-decorator';
-  import Sidebar from '@/components/partials/SideBar.vue';
-  import SideBar from "@/components/partials/SideBar.vue";
+import { Component, Vue } from "vue-property-decorator";
+import Sidebar from "@/components/partials/SideBar.vue";
+import SideBar from "@/components/partials/SideBar.vue";
 
-  @Component({
-      components: {
-          SideBar,
-          Sidebar,
-      }
-  })
-  export default class App extends Vue {}
-
-
+@Component({
+  components: {
+    SideBar,
+    Sidebar,
+  },
+})
+export default class App extends Vue {}
 </script>
