@@ -1,0 +1,105 @@
+<template>
+    <div>
+        <main>
+            <div id="sidebar-container" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <router-link :class="{ active: $route.name === 'Profile' }"  to="/" class="nav-link text-white">
+                            <i class="fa fa-user"></i> Profile
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link :class="{ active: $route.name === 'Billing' }"  to="/Billing" class="nav-link text-white">
+                            <i class="fa fa-cc-visa"></i> Billing
+                        </router-link>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </main>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "SideBar"
+    }
+</script>
+
+<style lang="scss">
+    #sidebar-container {
+        width: 16.5rem;
+        @media screen and (max-width: 400px) {
+            width: 6.5rem;
+        }
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        pointer-events: none;
+        fill: currentColor;
+    }
+
+    .dropdown-toggle { outline: 0; }
+
+    .nav-link {
+        border-radius: 0!important;
+    }
+
+    .btn-toggle {
+        display: inline-flex;
+        align-items: center;
+        padding: .25rem .5rem;
+        font-weight: 600;
+        color: rgba(0, 0, 0, .65);
+        background-color: transparent;
+        border: 0;
+    }
+    .btn-toggle:hover,
+    .btn-toggle:focus {
+        color: rgba(0, 0, 0, .85);
+        background-color: #d2f4ea;
+    }
+
+    .btn-toggle::before {
+        width: 1.25em;
+        line-height: 0;
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+        transition: transform .35s ease;
+        transform-origin: .5em 50%;
+    }
+
+    .btn-toggle[aria-expanded="true"] {
+        color: rgba(0, 0, 0, .85);
+    }
+    .btn-toggle[aria-expanded="true"]::before {
+        transform: rotate(90deg);
+    }
+
+    .btn-toggle-nav a {
+        display: inline-flex;
+        padding: .1875rem .5rem;
+        margin-top: .125rem;
+        margin-left: 1.25rem;
+        text-decoration: none;
+    }
+    .btn-toggle-nav a:hover,
+    .btn-toggle-nav a:focus {
+        background-color: #d2f4ea;
+    }
+
+    .scrollarea {
+        overflow-y: auto;
+    }
+
+    .fw-semibold { font-weight: 600; }
+    .lh-tight { line-height: 1.25; }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+</style>
