@@ -8,6 +8,6 @@ export default class BillingData {
     this.name = source.name || ''
     this.date = source.date || ''
     this.creditcard = source.creditcard || ''
-    this.cvv = source.creditcard || ''
+    this.cvv = source.cvv || ''
   }
 }
